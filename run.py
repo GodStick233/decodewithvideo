@@ -14,6 +14,6 @@ while(1):
             url = 'http://120.78.174.107:8090/add?data=' + testdate
             requests.post(url)
             found.add(testdate)
-    #cv2.imshow('Test',frame)
+    cv2.imshow('Test',frame)
     if cv2.waitKey(1) == ord('q'):
         break
