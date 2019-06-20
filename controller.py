@@ -62,7 +62,6 @@ def stop():
     GPIO.output(INT2,GPIO.LOW)
     
 print('\033[1;30;41m[INFO]\033[0mCar is running')
-print('[Tip]Pree Q will stop')
 def run(a,b):
     a = int(a)
     b = int(b)
@@ -86,3 +85,7 @@ for maptip in maps:
     run(a, b)
 print('[INFO]MOVE OVER')
 stop()
+
+
+print('[INFO]Program Over!')
+
