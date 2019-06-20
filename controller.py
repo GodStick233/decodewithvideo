@@ -78,14 +78,14 @@ def run(a,b):
     if a == 0:
         left()
         time.sleep(b)
+def start():
+    for maptip in maps:
+        a = maptip['direction']
+        b = maptip['len']
+        run(a, b)
+    print('[INFO]MOVE OVER')
+    stop()
 
-for maptip in maps:
-    a = maptip['direction']
-    b = maptip['len']
-    run(a, b)
-print('[INFO]MOVE OVER')
-stop()
 
-
-print('[INFO]Program Over!')
+    print('[INFO]Program Over!')
 
