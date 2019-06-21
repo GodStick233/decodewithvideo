@@ -30,7 +30,7 @@ GPIO.output(INT2,GPIO.LOW)
 GPIO.output(INT3,GPIO.LOW)
 GPIO.output(INT4,GPIO.LOW)
 
-pwma.ChangeDutyCycle(25)
+pwma.ChangeDutyCycle(90)
 pwmb.ChangeDutyCycle(15)
 def runningcv():
     GPIO.output(INT3,GPIO.HIGH)
@@ -78,6 +78,8 @@ def run(a,b):
     if a == 0:
         left()
         time.sleep(b)
+    if a == 3:
+        runningcv()
 def start():
     for maptip in maps:
         a = maptip['direction']
