@@ -31,14 +31,15 @@ GPIO.output(INT3,GPIO.LOW)
 GPIO.output(INT4,GPIO.LOW)
 
 pwma.ChangeDutyCycle(90)
-pwmb.ChangeDutyCycle(15)
+pwmb.ChangeDutyCycle(18)
 def runningcv():
+    print('[INFO]Decode')
     GPIO.output(INT3,GPIO.HIGH)
     GPIO.output(INT4,GPIO.LOW)
-    time.sleep(20)
+    time.sleep(30)
     GPIO.output(INT4,GPIO.HIGH)
     GPIO.output(INT3,GPIO.LOW)
-    time.sleep(20)
+    time.sleep(15)
     GPIO.output(INT3,GPIO.LOW)
     GPIO.output(INT4,GPIO.LOW)
 
@@ -71,6 +72,7 @@ def run(a,b):
     if a == -1:
         stop()
     if a == 4:
+        stop()
         runningcv()
     if a == 1:
         right()
@@ -79,6 +81,7 @@ def run(a,b):
         left()
         time.sleep(b)
     if a == 3:
+        stop()
         runningcv()
 def start():
     for maptip in maps:
